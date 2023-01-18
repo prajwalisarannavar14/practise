@@ -903,3 +903,18 @@ No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ubuntu@ip-10-0-2-42:/var/www/html$ sudo systemctl restart apache2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sudo mysql -u root -p
