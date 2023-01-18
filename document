@@ -1,0 +1,905 @@
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1019-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Nov 30 05:42:17 UTC 2022
+
+  System load:  0.16015625        Processes:             99
+  Usage of /:   19.7% of 7.57GB   Users logged in:       0
+  Memory usage: 20%               IPv4 address for eth0: 10.0.2.42
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Wed Nov 30 05:38:19 2022 from 18.206.107.29
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-10-0-2-42:~$ sudo apt-get install mysql-client php-mysql apache2 libapache2 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package libapache2
+ubuntu@ip-10-0-2-42:~$ sudo apt-get install mysql-client php-mysql apache2 libapache2-mod-php 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils bzip2 libapache2-mod-php8.1 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap mime-support
+  mysql-client-8.0 mysql-client-core-8.0 mysql-common php-common php8.1-cli php8.1-common php8.1-mysql php8.1-opcache php8.1-readline ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser bzip2-doc php-pear
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bzip2 libapache2-mod-php libapache2-mod-php8.1 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0
+  mailcap mime-support mysql-client mysql-client-8.0 mysql-client-core-8.0 mysql-common php-common php-mysql php8.1-cli php8.1-common php8.1-mysql php8.1-opcache
+  php8.1-readline ssl-cert
+0 upgraded, 26 newly installed, 0 to remove and 0 not upgraded.
+Need to get 10.2 MB of archives.
+After this operation, 92.5 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libapr1 amd64 1.7.0-8build1 [107 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libaprutil1 amd64 1.6.1-5ubuntu4 [92.4 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-5ubuntu4 [11.3 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libaprutil1-ldap amd64 1.6.1-5ubuntu4 [9162 B]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 liblua5.3-0 amd64 5.3.6-1build1 [140 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-bin amd64 2.4.52-1ubuntu4.1 [1347 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-data all 2.4.52-1ubuntu4.1 [165 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-utils amd64 2.4.52-1ubuntu4.1 [89.1 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 mailcap all 3.70+nmu1ubuntu1 [23.8 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 mime-support all 3.66 [3696 B]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2 amd64 2.4.52-1ubuntu4.1 [97.8 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 php-common all 2:92ubuntu1 [12.4 kB]
+Err:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-common amd64 8.1.2-1ubuntu2.4
+  404  Not Found [IP: 54.87.19.168 80]
+Err:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-opcache amd64 8.1.2-1ubuntu2.4
+  404  Not Found [IP: 54.87.19.168 80]
+Err:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-readline amd64 8.1.2-1ubuntu2.4
+  404  Not Found [IP: 54.87.19.168 80]
+Err:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-cli amd64 8.1.2-1ubuntu2.4
+  404  Not Found [IP: 54.87.19.168 80]
+Err:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapache2-mod-php8.1 amd64 8.1.2-1ubuntu2.4
+  404  Not Found [IP: 54.87.19.168 80]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 libapache2-mod-php all 2:8.1+92ubuntu1 [2898 B]
+Ign:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-core-8.0 amd64 8.0.30-0ubuntu0.22.04.1
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 mysql-common all 5.8+1.0.8 [7212 B]
+Ign:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-8.0 amd64 8.0.30-0ubuntu0.22.04.1
+Ign:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client all 8.0.30-0ubuntu0.22.04.1
+Err:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-mysql amd64 8.1.2-1ubuntu2.4
+  404  Not Found [IP: 54.87.19.168 80]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 php-mysql all 2:8.1+92ubuntu1 [1834 B]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
+Err:20 http://security.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-core-8.0 amd64 8.0.30-0ubuntu0.22.04.1
+  404  Not Found [IP: 54.87.19.168 80]
+Err:22 http://security.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-8.0 amd64 8.0.30-0ubuntu0.22.04.1
+  404  Not Found [IP: 54.87.19.168 80]
+Err:23 http://security.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client all 8.0.30-0ubuntu0.22.04.1
+  404  Not Found [IP: 54.87.19.168 80]
+Fetched 2163 kB in 0s (5007 kB/s)
+E: Failed to fetch http://us-east-1.ec2.archive.ubuntu.com/ubuntu/pool/main/p/php8.1/php8.1-common_8.1.2-1ubuntu2.4_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://us-east-1.ec2.archive.ubuntu.com/ubuntu/pool/main/p/php8.1/php8.1-opcache_8.1.2-1ubuntu2.4_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://us-east-1.ec2.archive.ubuntu.com/ubuntu/pool/main/p/php8.1/php8.1-readline_8.1.2-1ubuntu2.4_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://us-east-1.ec2.archive.ubuntu.com/ubuntu/pool/main/p/php8.1/php8.1-cli_8.1.2-1ubuntu2.4_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://us-east-1.ec2.archive.ubuntu.com/ubuntu/pool/main/p/php8.1/libapache2-mod-php8.1_8.1.2-1ubuntu2.4_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-client-core-8.0_8.0.30-0ubuntu0.22.04.1_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-client-8.0_8.0.30-0ubuntu0.22.04.1_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-client_8.0.30-0ubuntu0.22.04.1_all.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Failed to fetch http://us-east-1.ec2.archive.ubuntu.com/ubuntu/pool/main/p/php8.1/php8.1-mysql_8.1.2-1ubuntu2.4_amd64.deb  404  Not Found [IP: 54.87.19.168 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ubuntu@ip-10-0-2-42:~$ sudo apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [499 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]   
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [108 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [412 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [734 kB]
+Get:15 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [62.9 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [619 kB]     
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [165 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [81.1 kB]   
+Get:19 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [2408 B]     
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [10.9 kB]
+Get:21 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [4192 B]     
+Get:22 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [900 B]
+Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [453 kB]
+Get:24 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [228 B]
+Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [69.3 kB]
+Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [584 B]
+Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [757 kB]
+Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [126 kB]
+Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [4404 B]
+Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [7216 B]
+Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [2360 B]
+Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [420 B]
+Get:33 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [3008 B]
+Get:34 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [1432 B]
+Get:35 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [272 B]
+Get:36 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:37 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [6740 B]
+Get:38 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [9360 B]
+Get:39 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [352 B]
+Get:40 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 24.8 MB in 4s (6290 kB/s)                          
+Reading package lists... Done
+ubuntu@ip-10-0-2-42:~$ sudo systemctl status mysql
+Unit mysql.service could not be found.
+ubuntu@ip-10-0-2-42:~$ sudo systemctl status apache2
+Unit apache2.service could not be found.
+ubuntu@ip-10-0-2-42:~$ sudo systemctl status apache2
+Unit apache2.service could not be found.
+ubuntu@ip-10-0-2-42:~$ sudo apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Fetched 110 kB in 1s (208 kB/s)    
+Reading package lists... Done
+ubuntu@ip-10-0-2-42:~$ sudo systemctl status apache2
+Unit apache2.service could not be found.
+ubuntu@ip-10-0-2-42:~$ sudo apt-get install apache2
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap mime-support ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser bzip2-doc
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap mime-support ssl-cert
+0 upgraded, 13 newly installed, 0 to remove and 90 not upgraded.
+Need to get 1696 kB/2136 kB of archives.
+After this operation, 8505 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-bin amd64 2.4.52-1ubuntu4.2 [1344 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-data all 2.4.52-1ubuntu4.2 [165 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-utils amd64 2.4.52-1ubuntu4.2 [89.3 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2 amd64 2.4.52-1ubuntu4.2 [97.9 kB]
+Fetched 1696 kB in 0s (19.1 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 63663 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.7.0-8build1_amd64.deb ...
+Unpacking libapr1:amd64 (1.7.0-8build1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../01-libaprutil1_1.6.1-5ubuntu4_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-5ubuntu4) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-5ubuntu4_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../03-libaprutil1-ldap_1.6.1-5ubuntu4_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-5ubuntu4) ...
+Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../04-liblua5.3-0_5.3.6-1build1_amd64.deb ...
+Unpacking liblua5.3-0:amd64 (5.3.6-1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../05-apache2-bin_2.4.52-1ubuntu4.2_amd64.deb ...
+Unpacking apache2-bin (2.4.52-1ubuntu4.2) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../06-apache2-data_2.4.52-1ubuntu4.2_all.deb ...
+Unpacking apache2-data (2.4.52-1ubuntu4.2) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../07-apache2-utils_2.4.52-1ubuntu4.2_amd64.deb ...
+Unpacking apache2-utils (2.4.52-1ubuntu4.2) ...
+Selecting previously unselected package mailcap.
+Preparing to unpack .../08-mailcap_3.70+nmu1ubuntu1_all.deb ...
+Unpacking mailcap (3.70+nmu1ubuntu1) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../09-mime-support_3.66_all.deb ...
+Unpacking mime-support (3.66) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../10-apache2_2.4.52-1ubuntu4.2_amd64.deb ...
+Unpacking apache2 (2.4.52-1ubuntu4.2) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../11-bzip2_1.0.8-5build1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5build1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../12-ssl-cert_1.1.2_all.deb ...
+Unpacking ssl-cert (1.1.2) ...
+Setting up libapr1:amd64 (1.7.0-8build1) ...
+Setting up bzip2 (1.0.8-5build1) ...
+Setting up ssl-cert (1.1.2) ...
+Setting up liblua5.3-0:amd64 (5.3.6-1build1) ...
+Setting up apache2-data (2.4.52-1ubuntu4.2) ...
+Setting up mailcap (3.70+nmu1ubuntu1) ...
+Setting up libaprutil1:amd64 (1.6.1-5ubuntu4) ...
+Setting up mime-support (3.66) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-5ubuntu4) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4) ...
+Setting up apache2-utils (2.4.52-1ubuntu4.2) ...
+Setting up apache2-bin (2.4.52-1ubuntu4.2) ...
+Setting up apache2 (2.4.52-1ubuntu4.2) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36.1-4build1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Scanning processes...                                                                                                                                                           
+Scanning linux images...                                                                                                                                                        
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-10-0-2-42:~$ sudo systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2022-11-30 05:52:47 UTC; 21s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 3372 (apache2)
+      Tasks: 55 (limit: 1143)
+     Memory: 4.8M
+        CPU: 29ms
+     CGroup: /system.slice/apache2.service
+             ├─3372 /usr/sbin/apache2 -k start
+             ├─3374 /usr/sbin/apache2 -k start
+             └─3375 /usr/sbin/apache2 -k start
+
+Nov 30 05:52:47 ip-10-0-2-42 systemd[1]: Starting The Apache HTTP Server...
+Nov 30 05:52:47 ip-10-0-2-42 systemd[1]: Started The Apache HTTP Server.
+ubuntu@ip-10-0-2-42:~$ sudo gitclone https://github.com/sreepathysois/phpmysql-app.git
+sudo: gitclone: command not found
+ubuntu@ip-10-0-2-42:~$ sudo clone https://github.com/sreepathysois/phpmysql-app.git
+sudo: clone: command not found
+ubuntu@ip-10-0-2-42:~$ git clone https://github.com/sreepathysois/phpmysql-app.git
+Cloning into 'phpmysql-app'...
+remote: Enumerating objects: 321, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 321 (delta 19), reused 5 (delta 5), pack-reused 288
+Receiving objects: 100% (321/321), 13.80 MiB | 32.93 MiB/s, done.
+Resolving deltas: 100% (58/58), done.
+ubuntu@ip-10-0-2-42:~$ ls
+phpmysql-app
+ubuntu@ip-10-0-2-42:~$ cd phpmysql-app
+ubuntu@ip-10-0-2-42:~/phpmysql-app$ ls
+Jenkinsfile  docker-compose.yml          ecommerce_mysql_db_deployment.yaml  ecommerce_php_app_deployment.yaml  php
+README.md    docker-compose_updated.yml  ecommerce_mysql_db_service.yaml     ecommerce_php_app_service.yaml
+ubuntu@ip-10-0-2-42:~/phpmysql-app$ cd php
+ubuntu@ip-10-0-2-42:~/phpmysql-app/php$ ls
+online-shopping-system
+ubuntu@ip-10-0-2-42:~/phpmysql-app/php$ cd online-shopping-system
+ubuntu@ip-10-0-2-42:~/phpmysql-app/php/online-shopping-system$ ls
+Dockerfile                _config.yml  cart.php              css        fonts           img        login_form.php   payment_success.php  register_form.php
+Dockerfile_update_webapp  action.php   checkout.php          database   footer.php      index.php  logout.php       product.php          store.php
+LICENSE                   admin        checkout_process.php  db.php     header.php      js         newslettter.php  product_images
+README.md                 body.php     config.php            error.php  homeaction.php  login.php  offersmail.php   register.php
+ubuntu@ip-10-0-2-42:~/phpmysql-app/php/online-shopping-system$ cd var/www/html
+-bash: cd: var/www/html: No such file or directory
+ubuntu@ip-10-0-2-42:~/phpmysql-app/php/online-shopping-system$ cp -rf /home/ubuntu/phpmysql
+cp: missing destination file operand after '/home/ubuntu/phpmysql'
+Try 'cp --help' for more information.
+ubuntu@ip-10-0-2-42:~/phpmysql-app/php/online-shopping-system$ cd /var/www/html
+ubuntu@ip-10-0-2-42:/var/www/html$ ls
+index.html
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo rm index.html
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo cp -rf /var/www/html
+cp: missing destination file operand after '/var/www/html'
+Try 'cp --help' for more information.
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo cp -rf /home/ubuntu/phpmysql-app/php/online-shopping-system/* .
+ubuntu@ip-10-0-2-42:/var/www/html$ ls
+Dockerfile                _config.yml  cart.php              css        fonts           img        login_form.php   payment_success.php  register_form.php
+Dockerfile_update_webapp  action.php   checkout.php          database   footer.php      index.php  logout.php       product.php          store.php
+LICENSE                   admin        checkout_process.php  db.php     header.php      js         newslettter.php  product_images
+README.md                 body.php     config.php            error.php  homeaction.php  login.php  offersmail.php   register.php
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo mysql -hdatabase-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html$ cd database/
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html/database$ ls
+Dockerfile_db  onlineshop.sql
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html/database$  mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+Command 'mysql' not found, but can be installed with:
+sudo apt install mysql-client-core-8.0     # version 8.0.31-0ubuntu0.22.04.1, or
+sudo apt install mariadb-client-core-10.6  # version 1:10.6.7-2ubuntu1.1
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html/database$ mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+Command 'mysql' not found, but can be installed with:
+sudo apt install mysql-client-core-8.0     # version 8.0.31-0ubuntu0.22.04.1, or
+sudo apt install mariadb-client-core-10.6  # version 1:10.6.7-2ubuntu1.1
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo apt-get install mysql
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package mysql
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo apt-get update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease                          
+Fetched 214 kB in 0s (620 kB/s)
+Reading package lists... Done
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo apt-get install mysql
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package mysql
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html/database$ ls
+Dockerfile_db  onlineshop.sql
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html/database$ cd
+ubuntu@ip-10-0-2-42:~$ cd /var/www/html
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+sudo: mysql: command not found
+ubuntu@ip-10-0-2-42:/var/www/html$ cd
+ubuntu@ip-10-0-2-42:~$ sudo apt-get install mysql-client
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  mysql-client-8.0 mysql-client-core-8.0 mysql-common
+The following NEW packages will be installed:
+  mysql-client mysql-client-8.0 mysql-client-core-8.0 mysql-common
+0 upgraded, 4 newly installed, 0 to remove and 90 not upgraded.
+Need to get 2695 kB/2702 kB of archives.
+After this operation, 62.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-core-8.0 amd64 8.0.31-0ubuntu0.22.04.1 [2663 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-8.0 amd64 8.0.31-0ubuntu0.22.04.1 [22.7 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client all 8.0.31-0ubuntu0.22.04.1 [9428 B]
+Fetched 2695 kB in 0s (31.0 MB/s) 
+Selecting previously unselected package mysql-client-core-8.0.
+(Reading database ... 64432 files and directories currently installed.)
+Preparing to unpack .../mysql-client-core-8.0_8.0.31-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking mysql-client-core-8.0 (8.0.31-0ubuntu0.22.04.1) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../mysql-common_5.8+1.0.8_all.deb ...
+Unpacking mysql-common (5.8+1.0.8) ...
+Selecting previously unselected package mysql-client-8.0.
+Preparing to unpack .../mysql-client-8.0_8.0.31-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking mysql-client-8.0 (8.0.31-0ubuntu0.22.04.1) ...
+Selecting previously unselected package mysql-client.
+Preparing to unpack .../mysql-client_8.0.31-0ubuntu0.22.04.1_all.deb ...
+Unpacking mysql-client (8.0.31-0ubuntu0.22.04.1) ...
+Setting up mysql-common (5.8+1.0.8) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up mysql-client-core-8.0 (8.0.31-0ubuntu0.22.04.1) ...
+Setting up mysql-client-8.0 (8.0.31-0ubuntu0.22.04.1) ...
+Setting up mysql-client (8.0.31-0ubuntu0.22.04.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...                                                                                                                                                           
+Scanning linux images...                                                                                                                                                        
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-10-0-2-42:~$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 26
+Server version: 8.0.28 Source distribution
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| ecomdatabase       |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use ecomdatabase
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> source onlineshop.sql;
+ERROR: 
+Failed to open file 'onlineshop.sql', error: 2
+mysql> source onlineshop.sql;
+ERROR: 
+Failed to open file 'onlineshop.sql', error: 2
+mysql> source onlineshop.sql
+ERROR: 
+Failed to open file 'onlineshop.sql', error: 2
+mysql> source onlineshop.sql
+ERROR: 
+Failed to open file 'onlineshop.sql', error: 2
+mysql> source onlineshop.sql;
+ERROR: 
+Failed to open file 'onlineshop.sql', error: 2
+mysql> source onlineshop.sql;
+ERROR: 
+Failed to open file 'onlineshop.sql', error: 2
+mysql> source onlineshop.sql;
+ERROR: 
+Failed to open file 'onlineshop.sql', error: 2
+mysql> exit
+Bye
+ubuntu@ip-10-0-2-42:~$ cd /var/www/html
+ubuntu@ip-10-0-2-42:/var/www/html$ ls
+Dockerfile                _config.yml  cart.php              css        fonts           img        login_form.php   payment_success.php  register_form.php
+Dockerfile_update_webapp  action.php   checkout.php          database   footer.php      index.php  logout.php       product.php          store.php
+LICENSE                   admin        checkout_process.php  db.php     header.php      js         newslettter.php  product_images
+README.md                 body.php     config.php            error.php  homeaction.php  login.php  offersmail.php   register.php
+ubuntu@ip-10-0-2-42:/var/www/html$ cd database
+ubuntu@ip-10-0-2-42:/var/www/html/database$ ls
+Dockerfile_db  onlineshop.sql
+ubuntu@ip-10-0-2-42:/var/www/html/database$ sudo mysql -h database-1.cgpkk75eb4sp.us-east-1.rds.amazonaws.com -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 29
+Server version: 8.0.28 Source distribution
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| ecomdatabase       |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use ecomdatabase
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> source onlineshop.sql;
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1227 (42000): Access denied; you need (at least one of) the SUPER or SET_USER_ID privilege(s) for this operation
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected, 4 warnings (0.04 sec)
+
+Query OK, 17 rows affected (0.01 sec)
+Records: 17  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 7 rows affected (0.01 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected, 4 warnings (0.04 sec)
+
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected, 6 warnings (0.03 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 0 rows affected, 5 warnings (0.04 sec)
+
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected, 4 warnings (0.04 sec)
+
+Query OK, 71 rows affected (0.00 sec)
+Records: 71  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 9 rows affected, 1 warning (0.00 sec)
+Records: 9  Duplicates: 0  Warnings: 1
+
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 11 rows affected (0.00 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected, 1 warning (0.07 sec)
+Records: 1  Duplicates: 0  Warnings: 1
+
+Query OK, 6 rows affected, 1 warning (0.06 sec)
+Records: 6  Duplicates: 0  Warnings: 1
+
+Query OK, 17 rows affected, 1 warning (0.07 sec)
+Records: 17  Duplicates: 0  Warnings: 1
+
+Query OK, 7 rows affected, 1 warning (0.07 sec)
+Records: 7  Duplicates: 0  Warnings: 1
+
+Query OK, 3 rows affected, 1 warning (0.07 sec)
+Records: 3  Duplicates: 0  Warnings: 1
+
+Query OK, 0 rows affected, 1 warning (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+Query OK, 2 rows affected, 1 warning (0.06 sec)
+Records: 2  Duplicates: 0  Warnings: 1
+
+Query OK, 1 row affected, 1 warning (0.07 sec)
+Records: 1  Duplicates: 0  Warnings: 1
+
+Query OK, 3 rows affected, 1 warning (0.09 sec)
+Records: 3  Duplicates: 0  Warnings: 1
+
+Query OK, 71 rows affected, 1 warning (0.05 sec)
+Records: 71  Duplicates: 0  Warnings: 1
+
+Query OK, 9 rows affected, 1 warning (0.08 sec)
+Records: 9  Duplicates: 0  Warnings: 1
+
+Query OK, 11 rows affected, 1 warning (0.10 sec)
+Records: 11  Duplicates: 0  Warnings: 1
+
+Query OK, 1 row affected (0.06 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+Query OK, 3 rows affected (0.10 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_ecomdatabase |
++------------------------+
+| admin_info             |
+| brands                 |
+| cart                   |
+| categories             |
+| email_info             |
+| logs                   |
+| order_products         |
+| orders                 |
+| orders_info            |
+| products               |
+| user_info              |
+| user_info_backup       |
++------------------------+
+12 rows in set (0.01 sec)
+
+mysql> select * from logs;
+Empty set (0.00 sec)
+
+mysql> select * from brands;
++----------+-------------+
+| brand_id | brand_title |
++----------+-------------+
+|        1 | HP          |
+|        2 | Samsung     |
+|        3 | Apple       |
+|        4 | motorolla   |
+|        5 | LG          |
+|        6 | Cloth Brand |
++----------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> exit
+Bye
+ubuntu@ip-10-0-2-42:/var/www/html/database$ cd
+ubuntu@ip-10-0-2-42:~$ ls
+phpmysql-app
+ubuntu@ip-10-0-2-42:~$ cd /var/www/html
+ubuntu@ip-10-0-2-42:/var/www/html$ ls
+Dockerfile                _config.yml  cart.php              css        fonts           img        login_form.php   payment_success.php  register_form.php
+Dockerfile_update_webapp  action.php   checkout.php          database   footer.php      index.php  logout.php       product.php          store.php
+LICENSE                   admin        checkout_process.php  db.php     header.php      js         newslettter.php  product_images
+README.md                 body.php     config.php            error.php  homeaction.php  login.php  offersmail.php   register.php
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo nano db.php
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo systemctl restart apache2
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo apt-get install php-mysql
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  php-common php8.1-common php8.1-mysql
+The following NEW packages will be installed:
+  php-common php-mysql php8.1-common php8.1-mysql
+0 upgraded, 4 newly installed, 0 to remove and 36 not upgraded.
+Need to get 1256 kB/1270 kB of archives.
+After this operation, 9624 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-common amd64 8.1.2-1ubuntu2.9 [1126 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-mysql amd64 8.1.2-1ubuntu2.9 [130 kB]
+Fetched 1256 kB in 0s (24.7 MB/s) 
+Selecting previously unselected package php-common.
+(Reading database ... 93248 files and directories currently installed.)
+Preparing to unpack .../php-common_2%3a92ubuntu1_all.deb ...
+Unpacking php-common (2:92ubuntu1) ...
+Selecting previously unselected package php8.1-common.
+Preparing to unpack .../php8.1-common_8.1.2-1ubuntu2.9_amd64.deb ...
+Unpacking php8.1-common (8.1.2-1ubuntu2.9) ...
+Selecting previously unselected package php8.1-mysql.
+Preparing to unpack .../php8.1-mysql_8.1.2-1ubuntu2.9_amd64.deb ...
+Unpacking php8.1-mysql (8.1.2-1ubuntu2.9) ...
+Selecting previously unselected package php-mysql.
+Preparing to unpack .../php-mysql_2%3a8.1+92ubuntu1_all.deb ...
+Unpacking php-mysql (2:8.1+92ubuntu1) ...
+Setting up php-common (2:92ubuntu1) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+Setting up php8.1-common (8.1.2-1ubuntu2.9) ...
+
+Creating config file /etc/php/8.1/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/tokenizer.ini with new version
+Setting up php8.1-mysql (8.1.2-1ubuntu2.9) ...
+
+Creating config file /etc/php/8.1/mods-available/mysqlnd.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/mysqli.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/pdo_mysql.ini with new version
+Setting up php-mysql (2:8.1+92ubuntu1) ...
+Scanning processes...                                                                                                                                                           
+Scanning candidates...                                                                                                                                                          
+Scanning linux images...                                                                                                                                                        
+
+Restarting services...
+ /etc/needrestart/restart.d/systemd-manager
+ systemctl restart apache-htcacheclean.service cron.service multipathd.service packagekit.service polkit.service rsyslog.service ssh.service systemd-journald.service systemd-networkd.service systemd-resolved.service systemd-udevd.service udisks2.service
+Service restarts being deferred:
+ systemctl restart ModemManager.service
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart networkd-dispatcher.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+ systemctl restart user@1000.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo apt-get install php 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libapache2-mod-php8.1 php8.1 php8.1-cli php8.1-opcache php8.1-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php8.1 php php8.1 php8.1-cli php8.1-opcache php8.1-readline
+0 upgraded, 6 newly installed, 0 to remove and 36 not upgraded.
+Need to get 3988 kB of archives.
+After this operation, 12.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-opcache amd64 8.1.2-1ubuntu2.9 [365 kB]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-readline amd64 8.1.2-1ubuntu2.9 [13.5 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1-cli amd64 8.1.2-1ubuntu2.9 [1833 kB]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapache2-mod-php8.1 amd64 8.1.2-1ubuntu2.9 [1764 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 php8.1 all 8.1.2-1ubuntu2.9 [9154 B]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 php all 2:8.1+92ubuntu1 [2756 B]
+Fetched 3988 kB in 0s (41.7 MB/s)
+Selecting previously unselected package php8.1-opcache.
+(Reading database ... 93340 files and directories currently installed.)
+Preparing to unpack .../0-php8.1-opcache_8.1.2-1ubuntu2.9_amd64.deb ...
+Unpacking php8.1-opcache (8.1.2-1ubuntu2.9) ...
+Selecting previously unselected package php8.1-readline.
+Preparing to unpack .../1-php8.1-readline_8.1.2-1ubuntu2.9_amd64.deb ...
+Unpacking php8.1-readline (8.1.2-1ubuntu2.9) ...
+Selecting previously unselected package php8.1-cli.
+Preparing to unpack .../2-php8.1-cli_8.1.2-1ubuntu2.9_amd64.deb ...
+Unpacking php8.1-cli (8.1.2-1ubuntu2.9) ...
+Selecting previously unselected package libapache2-mod-php8.1.
+Preparing to unpack .../3-libapache2-mod-php8.1_8.1.2-1ubuntu2.9_amd64.deb ...
+Unpacking libapache2-mod-php8.1 (8.1.2-1ubuntu2.9) ...
+Selecting previously unselected package php8.1.
+Preparing to unpack .../4-php8.1_8.1.2-1ubuntu2.9_all.deb ...
+Unpacking php8.1 (8.1.2-1ubuntu2.9) ...
+Selecting previously unselected package php.
+Preparing to unpack .../5-php_2%3a8.1+92ubuntu1_all.deb ...
+Unpacking php (2:8.1+92ubuntu1) ...
+Setting up php8.1-readline (8.1.2-1ubuntu2.9) ...
+
+Creating config file /etc/php/8.1/mods-available/readline.ini with new version
+Setting up php8.1-opcache (8.1.2-1ubuntu2.9) ...
+
+Creating config file /etc/php/8.1/mods-available/opcache.ini with new version
+Setting up php8.1-cli (8.1.2-1ubuntu2.9) ...
+update-alternatives: using /usr/bin/php8.1 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar8.1 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar8.1 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/8.1/cli/php.ini with new version
+Setting up libapache2-mod-php8.1 (8.1.2-1ubuntu2.9) ...
+
+Creating config file /etc/php/8.1/apache2/php.ini with new version
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+apache2_switch_mpm Switch to prefork
+apache2_invoke: Enable module php8.1
+Setting up php8.1 (8.1.2-1ubuntu2.9) ...
+Setting up php (2:8.1+92ubuntu1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for php8.1-cli (8.1.2-1ubuntu2.9) ...
+Processing triggers for libapache2-mod-php8.1 (8.1.2-1ubuntu2.9) ...
+Scanning processes...                                                                                                                                                           
+Scanning candidates...                                                                                                                                                          
+Scanning linux images...                                                                                                                                                        
+
+Restarting services...
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart networkd-dispatcher.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+ systemctl restart user@1000.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-10-0-2-42:/var/www/html$ sudo systemctl restart apache2
